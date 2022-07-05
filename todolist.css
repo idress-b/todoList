@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+
+.container{
+    background-color: rgb(240, 207, 164);
+    border: 1px solid grey;
+    border-radius:10px;
+    padding:2rem;
+    margin:1rem auto;
+    width:100%;
+    max-width : 25rem;
+    text-align: center;
+}
+
+#form{
+    margin-bottom: 2rem;
+    display:flex;
+    align-items:center;
+}
+
+#form input{
+    padding:0.4rem;
+    border-radius:8px;
+    flex-grow:1;
+    color:rgba(0,0,0,0.9);
+    font-size:1.3rem;
+   
+}
+
+#form button{
+    padding:0.4rem 1rem;
+    margin-left:0.5rem;
+    border-radius: 8px;
+    color:white;
+    background-color: rgba(0,0,0,0.6);
+}
+
+
+
+#todo-list li{
+    display:flex;
+    margin: 1rem 0rem;
+    border:1px solid grey;
+    border-radius:7px;
+    padding:0.3rem;
+    list-style-type: none;
+    align-items:center;
+    background-color: rgba(0, 0,0,0.5);
+    color:white;
+    font-size: 1.3rem;
+    animation :animation 0.3s ease-in-out;
+}
+
+@keyframes animation{
+    0%{
+        opacity:0;
+        transform:translate(-20px,-20px);
+    }
+    100%{
+        opacity:1;
+        transform: translate(0px,0px);
+    }
+}
+
+#todo-list li>p{
+    text-align: left;
+flex-grow:1;
+}
+
+#todo-list button{
+   border: none;
+   border-radius:5px;
+   padding:0.2rem;
+   background-color: rgba(255,255,255,0.5);
+   fill:rgba(0, 0,0,0.8);
+   margin: 0 0.1rem;
+ }
+#todo-list button:hover{
+    cursor:pointer;
+    background-color: rgba(255,255,255,0.3);
+}
+
+.done{
+    text-decoration:line-through;
+}
