@@ -22,13 +22,15 @@
                 // on créer l'element task on y ajoute tout les éléments necessaires
                 const task = document.createElement("li");
                 
-                const newText = document.createElement("p");
+                const newText = document.createElement("span");
                 
                 task.append(newText);
                 newText.innerText=input.value;
                 // création et gestion du bouton de validation de tache
+                const divButtons = document.createElement("div");
+                task.append(divButtons);
                 const doneButton = document.createElement("button");
-                task.append(doneButton);
+                divButtons.append(doneButton);
                 doneButton.innerHTML += outlineIcon;
 
                 // on toggle sur le bouton done et undone
@@ -38,17 +40,17 @@
                     if (!done){
                         done=!done;
                         doneButton.innerHTML = checkIcon;
-                        newText.classList.add('done');
+                        newText.classList.add('strike');
                     }else {
                         done=!done;
                         doneButton.innerHTML = outlineIcon;
-                        newText.classList.remove('done');
+                        newText.classList.remove('strike');
                     }
                 })
 
                 // bouton de suppression
                 const trashButton = document.createElement("button");
-                task.append(trashButton);
+                divButtons.append(trashButton);
                 trashButton.innerHTML += trashIcon;
 
                 // on ajoute la task à la liste
